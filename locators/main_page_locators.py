@@ -1,7 +1,7 @@
 from selenium.webdriver.common.by import By
 
 
-class Locators:
+class MainPageLocators:
     question_one_button = (By.ID, "accordion__heading-0")
     answer_question_one = (By.ID, "accordion__panel-0")
     question_two_button = (By.ID, "accordion__heading-1")

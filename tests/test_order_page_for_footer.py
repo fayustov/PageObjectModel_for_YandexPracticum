@@ -1,5 +1,5 @@
+from pages.main_page import MainPage
 from pages.order_page import OrderPage
-from pages.base_page import BasePage
 from users import UserOne
 from users import UserTwo
 import allure
@@ -17,8 +17,9 @@ class TestOrderForFooter:
                                    expected_result):
         page = OrderPage(driver)
 
-        base_page = BasePage(driver)
-        base_page.go_to_site("https://qa-scooter.praktikum-services.ru/")
+        main_page = MainPage(driver)
+        main_page.go_to_site("https://qa-scooter.praktikum-services.ru/")
+        main_page.check_cookie()
         page.order_for_footer()
         order_for_footer_button_complete = page.order_scooter(first_name, last_name, address, st_subway, phone, date, comment)
         assert expected_result in order_for_footer_button_complete

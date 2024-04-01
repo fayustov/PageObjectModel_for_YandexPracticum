@@ -1,7 +1,7 @@
 from selenium.webdriver.common.by import By
 
 
-class Locators:
+class OrderPageLocators:
     order_button_in_header = (By.XPATH, ".//button[contains(@class, 'Button_Button__ra12g') and text()='Заказать']")
     order_button_in_footer = (By.XPATH, ".//button[contains(@class, 'Button_UltraBig') and text() = 'Заказать']")
     first_name_field = (By.XPATH, "//input[@placeholder='* Имя']")
