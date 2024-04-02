@@ -1,6 +1,5 @@
 from pages.main_page import MainPage
 from locators.main_page_locators import MainPageLocators
-from pages.base_page import BasePage
 import allure
 import pytest
 
@@ -27,7 +26,6 @@ class TestMainQuestions:
                                'Да, обязательно. Всем самокатов! И Москве, и Московской области.')])
     def test_questions(self, button, answer, expected_result, driver):
         main_page = MainPage(driver)
-        base_page = BasePage(driver)
-        base_page.go_to_site("https://qa-scooter.praktikum-services.ru/")
+        main_page.go_to_site("https://qa-scooter.praktikum-services.ru/")
         get_answer = main_page.main_page_questions(button, answer)
         assert get_answer == expected_result

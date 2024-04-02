@@ -29,4 +29,3 @@ class BasePage:
     def switch_window(self):
         window_after = self.driver.window_handles[1]
         return self.driver.switch_to.window(window_after)
-        

@@ -27,3 +27,6 @@ class MainPage(BasePage):
         self.find_element_to_be_clickable(button)
         search_field.click()
         return self.find_element_located(answer).text
+
+    def find_dzen_logo(self):
+        self.find_element_located(MainPageLocators.dzen_page_id)
